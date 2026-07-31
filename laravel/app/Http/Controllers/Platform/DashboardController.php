@@ -13,14 +13,15 @@ class DashboardController extends Controller
      * Display the Platform Dashboard.
      */
     public function index()
-    {
-        $stats = [
-            'companies' => Company::count(),
-            'users' => User::count(),
-            'employees' => User::count(), // Temporary
-            'plans' => 0, // Temporary
-            'system_status' => 'Online',
-        ];
+{
+
+    $stats = [
+        'companies' => Company::count(),
+        'users' => User::count(),
+        'employees' => User::count(),
+        'plans' => 0,
+        'system_status' => 'Online',
+    ];
 
         $recentCompanies = Company::latest()
             ->take(5)

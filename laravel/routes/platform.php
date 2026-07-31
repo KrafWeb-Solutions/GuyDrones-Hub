@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Platform\DashboardController;
 
-Route::middleware(['auth'])
+Route::middleware(['web', 'auth'])
     ->prefix('platform')
     ->name('platform.')
     ->group(function () {
